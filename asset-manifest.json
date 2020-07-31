@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/rinZee/React-recipe/static/css/main.4f044479.chunk.css",
-    "main.js": "/rinZee/React-recipe/static/js/main.244ce34b.chunk.js",
-    "main.js.map": "/rinZee/React-recipe/static/js/main.244ce34b.chunk.js.map",
-    "runtime-main.js": "/rinZee/React-recipe/static/js/runtime-main.bfd3e791.js",
-    "runtime-main.js.map": "/rinZee/React-recipe/static/js/runtime-main.bfd3e791.js.map",
-    "static/js/2.6d555d07.chunk.js": "/rinZee/React-recipe/static/js/2.6d555d07.chunk.js",
-    "static/js/2.6d555d07.chunk.js.map": "/rinZee/React-recipe/static/js/2.6d555d07.chunk.js.map",
-    "index.html": "/rinZee/React-recipe/index.html",
-    "precache-manifest.ebfa0e8526dd30e89d9ff978f27af672.js": "/rinZee/React-recipe/precache-manifest.ebfa0e8526dd30e89d9ff978f27af672.js",
-    "service-worker.js": "/rinZee/React-recipe/service-worker.js",
-    "static/css/main.4f044479.chunk.css.map": "/rinZee/React-recipe/static/css/main.4f044479.chunk.css.map",
-    "static/js/2.6d555d07.chunk.js.LICENSE.txt": "/rinZee/React-recipe/static/js/2.6d555d07.chunk.js.LICENSE.txt"
+    "main.css": "/React-recipe/static/css/main.4f044479.chunk.css",
+    "main.js": "/React-recipe/static/js/main.00e9daee.chunk.js",
+    "main.js.map": "/React-recipe/static/js/main.00e9daee.chunk.js.map",
+    "runtime-main.js": "/React-recipe/static/js/runtime-main.1a5ebf27.js",
+    "runtime-main.js.map": "/React-recipe/static/js/runtime-main.1a5ebf27.js.map",
+    "static/js/2.6d555d07.chunk.js": "/React-recipe/static/js/2.6d555d07.chunk.js",
+    "static/js/2.6d555d07.chunk.js.map": "/React-recipe/static/js/2.6d555d07.chunk.js.map",
+    "index.html": "/React-recipe/index.html",
+    "precache-manifest.1d376701eff7ebe447ede23e9214a8df.js": "/React-recipe/precache-manifest.1d376701eff7ebe447ede23e9214a8df.js",
+    "service-worker.js": "/React-recipe/service-worker.js",
+    "static/css/main.4f044479.chunk.css.map": "/React-recipe/static/css/main.4f044479.chunk.css.map",
+    "static/js/2.6d555d07.chunk.js.LICENSE.txt": "/React-recipe/static/js/2.6d555d07.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.bfd3e791.js",
+    "static/js/runtime-main.1a5ebf27.js",
     "static/js/2.6d555d07.chunk.js",
     "static/css/main.4f044479.chunk.css",
-    "static/js/main.244ce34b.chunk.js"
+    "static/js/main.00e9daee.chunk.js"
   ]
 }
