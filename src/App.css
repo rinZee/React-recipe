@@ -1,16 +1,14 @@
 .App {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+  background-image: #fff;
 }
 .search-form {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 10vh;
+  box-shadow: inset;
 }
 .search-bar {
   border: none;
@@ -24,7 +22,8 @@
   color: white;
 }
 .recipes {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
