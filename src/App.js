@@ -7,6 +7,7 @@ function App() {
   const APP_KEY = "c4e4cb59bf1d2fbc104bfec5a64f8eb1";
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
+  const [searchHistory, setSearchHistory] = useState("");
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -29,14 +30,17 @@ function App() {
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
+    setSearchHistory(search);
     setSearch("");
   };
 
   
   return (
     <div className="App">
-    
-      <form className="search-form" onSubmit={getSearch}>
+      <div className="nav-bar">
+    <nav>FoodBook</nav>
+      
+      {searchHistory ? <form className='search-form'  onSubmit={getSearch}>
         <input
           className="search-bar"
           type="text"
@@ -45,9 +49,25 @@ function App() {
           placeholder='Find a recipe'
         ></input>
         <button className="search-button" type="submit">
-          submit
+          Search
+        </button>
+      </form> : ''
+  }
+      </div>
+      {searchHistory ? '' : <form className='search-form center'  onSubmit={getSearch}>
+        <input
+          className="search-bar"
+          type="text"
+          value={search}
+          onChange={updateSearch}
+          placeholder='Find a recipe'
+        ></input>
+        <button className="search-button" type="submit">
+          Search
         </button>
       </form>
+  }
+      {searchHistory ? <h2>Showing search results for {searchHistory}</h2> : ''}
       <div className="recipes">
         {recipes.map((recipe, index) => (
           <Recipe
