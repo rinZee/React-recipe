@@ -1,26 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
 .App {
-  min-height: 100vh;
-  font-family: "Roboto";
-  font-weight: lighter;
   background-image: #fff;
+  min-height: 100vh;
 }
 
-.App .nav-bar {
+.nav-bar {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
-.search-form-center {
-  background-color: #000;
-}
-.App nav {
-  margin-left: 20px;
+
+nav {
   font-family: "Pacifico", cursive;
+  margin-left: 20px;
   font-size: 2rem;
   display: inline-block;
   cursor: pointer;
+}
+
+.search-form-center {
+  background-color: #000;
 }
 
 .search-form {
@@ -53,6 +53,8 @@ h2 {
   font-weight: 300;
 }
 .recipes {
+  font-family: "Roboto";
+  font-weight: lighter;
   margin-top: 10vh;
   height: 100%;
   width: 100%;
