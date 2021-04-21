@@ -1,6 +1,7 @@
 import React from 'react';
 import Recipe from './Recipe';
-const Recipes = () => {
+import './Recipes.css';
+const Recipes = ({recipes}) => {
     return (
         <div className="recipes">
      {recipes.map((recipe, index) => (

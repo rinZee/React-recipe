@@ -1,0 +1,15 @@
+.recipes {
+  font-family: "Roboto";
+  font-weight: lighter;
+  margin-top: 10vh;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .recipes {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import './Recipe.css';
 
 const Form = () => {
 
@@ -10,8 +11,7 @@ const Form = () => {
     
       const getSearch = (e) => {
         e.preventDefault();
-        setQuery(search);
-        setSearchHistory(search);
+        //setQuery(search);
         setSearch("");
       };
     return (
@@ -27,6 +27,7 @@ const Form = () => {
         Search
       </button>
     </form> 
+
     )
 }
 
