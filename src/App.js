@@ -3,17 +3,16 @@ import "./App.css";
 import Form from './components/Form';
 import Recipes from './components/Recipes';
 
-import {GlobalProvider} from './context/GlobalState';
 import {GlobalContext} from './context/GlobalState';
 function App() {
   const APP_ID = "4d34059b";
   const APP_KEY = "c4e4cb59bf1d2fbc104bfec5a64f8eb1";
   const [recipes, setRecipes] = useState([]);
-  const [query, setQuery] = useContext(GlobalContext);
+  const [query, setQuery]= useState('apple');
 
- // useEffect(() => {
- //   getRecipe();
- // }, [query]);
+  useEffect(() => {
+     getRecipe();
+  }, [query]);
 
   const getRecipe = async () => {
     const response = await fetch(
@@ -24,19 +23,15 @@ function App() {
     console.log(data.hits)
   }; 
     return (
-      <GlobalProvider>
+      <GlobalContext.Provider value={{setQuery, recipes}}>
       <div className="App">
          <div className="nav-bar">
           <nav>FoodBook</nav>
           <Form getRecipe={getRecipe}/>
         </div>
-        <Recipes recipes={recipes}/>
-
+        <Recipes />
     </div>
-</GlobalProvider>
-  
-  
-
+    </GlobalContext.Provider>
   );
 }
 

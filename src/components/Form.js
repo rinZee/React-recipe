@@ -1,9 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react';
+import {GlobalContext} from '../context/GlobalState';
 import './Recipe.css';
 
 const Form = () => {
 
     const [search, setSearch] = useState("");
+    const {setQuery} = useContext(GlobalContext);
 
     const updateSearch = (e) => {
         setSearch(e.target.value);
@@ -11,7 +13,7 @@ const Form = () => {
     
       const getSearch = (e) => {
         e.preventDefault();
-        //setQuery(search);
+        setQuery(search);
         setSearch("");
       };
     return (
@@ -27,7 +29,6 @@ const Form = () => {
         Search
       </button>
     </form> 
-
     )
 }
 
