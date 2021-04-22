@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {GlobalContext} from '../context/GlobalState';
-import './Recipe.css';
+import './Form.css';
+import {Link, BrowserRouter as Router} from 'react-router-dom';
 
 const Form = () => {
 
@@ -17,6 +18,7 @@ const Form = () => {
         setSearch("");
       };
     return (
+      <Router>
            <form className='search-form'  onSubmit={getSearch}>
       <input
         className="search-bar"
@@ -26,9 +28,10 @@ const Form = () => {
         placeholder='Find a recipe'
       ></input>
       <button className="search-button" type="submit">
-        Search
-      </button>
+      Search
+</button>
     </form> 
+    </Router>
     )
 }
 
