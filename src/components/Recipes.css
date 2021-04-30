@@ -1,5 +1,5 @@
 .recipes {
-  background: #e2e1e0;
+  background: #fff;
 
   font-family: "Roboto";
   font-weight: lighter;
@@ -11,7 +11,7 @@
 }
 
 .recipe {
-  background: #fff;
+  background: #e2e1e0;
   display: flex;
   justify-content: center;
   align-items: center;
