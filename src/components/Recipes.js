@@ -6,18 +6,24 @@ import './Recipes.css';
 const Recipes = () => {
   const {recipes} =useContext(GlobalContext);
     return (
+
       <Router>
         <div className="recipes">
-     {recipes ? recipes.map((recipe, index) => (
-       <div className="recipe" key={index}>
-       <img src={recipe.recipe.image} alt="" />
-       <h1>{recipe.recipe.label}</h1>
-       <Link to={{ pathname: "/recipe"}}>View Recipe</Link>
+     {recipes.map((recipe, index) => (
+
+        <div className="recipe" key={index}>
+
+       <img src={recipe.image} alt="" />
+       <h1>{recipe.title}</h1>
+       <Link to={`/React-recipe/f`} className='links'><p>why not working</p></Link>
+
+
        
+
      </div>
-        
-      )) : <h1>No results</h1>}
-      
+
+      )) }
+     
     </div>
     </Router>
     )

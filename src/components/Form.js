@@ -1,7 +1,8 @@
 import React, {useState, useContext} from 'react';
 import {GlobalContext} from '../context/GlobalState';
+import { BrowserRouter as Router, Link} from 'react-router-dom';
+
 import './Form.css';
-import {Link, BrowserRouter as Router} from 'react-router-dom';
 
 const Form = () => {
 
@@ -27,9 +28,13 @@ const Form = () => {
         onChange={updateSearch}
         placeholder='Find a recipe'
       ></input>
-      <button className="search-button" type="submit">
+                
+<button className="search-button" type="submit">
+<Link to={'/recipes'} className='links'>
       Search
+      </Link>
 </button>
+
     </form> 
     </Router>
     )

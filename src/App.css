@@ -18,3 +18,8 @@ nav {
   display: inline-block;
   cursor: pointer;
 }
+
+.links {
+  color: #000;
+  text-decoration: none;
+}

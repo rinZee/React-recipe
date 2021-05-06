@@ -5,40 +5,44 @@ import {
   Switch,
   Route, Link
 } from "react-router-dom";
-import Recipe from './components/Recipe';
 import Form from './components/Form';
-import Home from './components/Home';
+import Recipes from './components/Recipes';
+import Recipe from './components/Recipe';
 
 import {GlobalContext} from './context/GlobalState';
 function App() {
-  const APP_ID = "4d34059b";
-  const APP_KEY = "c4e4cb59bf1d2fbc104bfec5a64f8eb1";
+  
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery]= useState('');
 
-  useEffect(() => {
-    getRecipe();
-  }, [query]);
   const getRecipe = async () => {
     const response = await fetch(
-      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+      `https://api.spoonacular.com/recipes/complexSearch?query=${query}&maxFat=25&number=10&apiKey=281cd092160d4e149fb0cc2614165ad6`
     );
     const data = await response.json();
-    setRecipes(data.hits);
-    console.log(data.hits)
+    //setRecipes(data.hits);
+    setRecipes(data.results);
   }; 
+
+  useEffect(() => {
+    getRecipe();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [query]);
+ 
     return (
       <GlobalContext.Provider value={{setQuery, recipes}}>
         <Router>
       <div className="App">
          <div className="nav-bar">
-          <Link to={{ pathname: "/"}}><nav>FoodBook</nav></Link>
+         <Link to={'React-recipe/'} className='links'><nav>FoodBook</nav></Link>
+         <Link to={`/React-recipe/f`} className='links'><p>hello</p></Link>
+
           <Form getRecipe={getRecipe}/>
         </div>
         <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/recipe' exact component={Recipe} />
-          
+        <Route path='/React-recipe/:id' exact component={Recipe} />
+        <Route path='/React-recipe' exact component={Recipes} />
+
         </Switch>
     </div>
     </Router>
