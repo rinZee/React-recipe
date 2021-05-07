@@ -3,9 +3,8 @@ import "./App.css";
 import {
   BrowserRouter as Router,
   Switch,
-  Route, Link
+  Route
 } from "react-router-dom";
-import Form from './components/Form';
 import Recipes from './components/Recipes';
 import Recipe from './components/Recipe';
 
@@ -30,19 +29,13 @@ function App() {
   }, [query]);
  
     return (
-      <GlobalContext.Provider value={{setQuery, recipes}}>
+      <GlobalContext.Provider value={{setQuery, recipes, getRecipe}}>
         <Router>
       <div className="App">
-         <div className="nav-bar">
-         <Link to={'React-recipe/'} className='links'><nav>FoodBook</nav></Link>
-         <Link to={`/React-recipe/f`} className='links'><p>hello</p></Link>
-
-          <Form getRecipe={getRecipe}/>
-        </div>
+         
         <Switch>
-        <Route path='/React-recipe/:id' exact component={Recipe} />
-        <Route path='/React-recipe' exact component={Recipes} />
-
+        <Route path='/' exact component={Recipes} />
+        <Route path='/recipe/:id' exact component={Recipe} />
         </Switch>
     </div>
     </Router>

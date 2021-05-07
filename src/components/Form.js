@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import {GlobalContext} from '../context/GlobalState';
-import { BrowserRouter as Router, Link} from 'react-router-dom';
 
 import './Form.css';
 
@@ -19,7 +18,6 @@ const Form = () => {
         setSearch("");
       };
     return (
-      <Router>
            <form className='search-form'  onSubmit={getSearch}>
       <input
         className="search-bar"
@@ -30,13 +28,11 @@ const Form = () => {
       ></input>
                 
 <button className="search-button" type="submit">
-<Link to={'/recipes'} className='links'>
       Search
-      </Link>
 </button>
 
     </form> 
-    </Router>
+    
     )
 }
 
