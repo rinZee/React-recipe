@@ -34,7 +34,7 @@ function App() {
       <div className="App">
          
         <Switch>
-        <Route path='/' exact component={Recipes} />
+        <Route path='/React-recipe' exact component={Recipes} />
         <Route path='/recipe/:id' exact component={Recipe} />
         </Switch>
     </div>
