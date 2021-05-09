@@ -8,23 +8,26 @@ const Recipes = () => {
     return (
 <div>
         <div className="nav-bar">
-         <Link to={'/'} className='links'><nav>FoodBook</nav></Link>
+         <Link to={'/React-recipe'} className='links'><nav>FoodBook</nav></Link>
 
           <Form getRecipe={getRecipe}/>
           </div>
         <div className="recipes">
      {recipes.map((recipe, index) => (
-
+      <Link to={{
+  pathname: `/recipe/${recipe.recipe.label}`,
+  state: {recipe},
+  }}  className='links'>
         <div className="recipe" key={index}>
-<Link to={`/recipe/${recipe.id}`} className='links'>
-       <img src={recipe.image} alt={recipe.title} />
-       <h1>{recipe.title}</h1>
-       </Link>
+
+       <img src={recipe.recipe.image} alt={recipe.recipe.label} />
+       <h1>{recipe.recipe.label}</h1>
 
 
        
 
      </div>
+     </Link>
 
       )) }
      
