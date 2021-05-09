@@ -13,14 +13,17 @@ function App() {
   
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery]= useState('');
+const APP_ID = '4d34059b';
+const APP_KEY = 'c4e4cb59bf1d2fbc104bfec5a64f8eb1';
 
   const getRecipe = async () => {
     const response = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?query=${query}&maxFat=25&number=10&apiKey=281cd092160d4e149fb0cc2614165ad6`
+      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
     );
     const data = await response.json();
     //setRecipes(data.hits);
-    setRecipes(data.results);
+    setRecipes(data.hits);
+    console.log(data.hits);
   }; 
 
   useEffect(() => {
